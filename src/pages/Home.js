@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ImageSlider from '../components/ImageSlider';
+import ContactUs from '../components/ContactUs';
 
 const Home = () => {
   return (
@@ -9,7 +11,7 @@ const Home = () => {
       <h2 className="heading">Purpose of the Site</h2>
         <ul className="feature-list">
           <li className="feature-item">
-            <Link to="/banking-forms">📄 Banking Forms / Tools</Link>
+            <Link to="/BankingForms">📄 Banking Forms / Tools</Link>
           </li>
           <li className="feature-item">
             <Link to="/cheque-printing">🖨️ Cheque Printing Tools</Link>
@@ -28,6 +30,7 @@ const Home = () => {
           </li>
         </ul>
       </div>
+      <ContactUs/>
 
       <style jsx>{`
         /* Home Component Styles */
