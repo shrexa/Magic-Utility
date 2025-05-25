@@ -10,7 +10,8 @@ const ContactUs = () => {
   const [submitted, setSubmitted] = useState(false);
 
   // Google Form URL (replace with your own Google Form URL)
-  const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSerXEd4c_p7pJepbNwRlyQD8y-PjGTsyONqm_2DPKVQAZdJqQ/viewform?usp=header";
+  const googleFormUrl = "https://docs.google.com/forms/d/18J9hA_UITZOKQ1sUnELk9nIJgXLWL_TTIJ_9titErNE/formResponse";
+   
 
   // Handle form field changes
   const handleChange = (e) => {
@@ -27,9 +28,13 @@ const ContactUs = () => {
     
     // Construct form data for Google Forms
     const formDataEncoded = new FormData();
-    formDataEncoded.append("entry.123456789", formData.name); // Replace with your field IDs
-    formDataEncoded.append("entry.987654321", formData.email);
-    formDataEncoded.append("entry.192837465", formData.message);
+    // formDataEncoded.append("entry.123456789", formData.name); // Replace with your field IDs
+    // formDataEncoded.append("entry.987654321", formData.email);
+    // formDataEncoded.append("entry.192837465", formData.message);
+    formDataEncoded.append("entry.189234234", formData.name);
+formDataEncoded.append("entry.209384738", formData.email);
+formDataEncoded.append("entry.302948203", formData.message);
+
 
     // Submit to Google Forms
     fetch(googleFormUrl, {
