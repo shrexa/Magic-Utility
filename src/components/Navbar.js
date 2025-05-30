@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import logo from 'publiccon.png'; 
 
 function Navbar() {
   return (
     <nav className="navbar">
-      <img src="/logo.png" alt="Logo" className="logo" />
+ <img src="/icon.png" alt="Logo" className="logo" />
       <ul className="nav-links">
         <li><Link to="/" className="nav-link">Home</Link></li>
         <li><Link to="/rtgs-neft" className="nav-link">RTGS/NEFT Forms</Link></li>
@@ -18,8 +19,8 @@ function Navbar() {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 1rem 2rem;
-          background-color: blue;
+          // padding: 1rem 2rem;
+          background-color: #049cbb;
           color: white;
           position: sticky;
           top: 0;
@@ -28,7 +29,7 @@ function Navbar() {
 
         /* Logo Styling */
         .logo {
-          height: 35px;
+          height: 55px;
           width: auto;
           // color:#fff;
         }
@@ -51,7 +52,7 @@ function Navbar() {
 
         /* Hover Effect on Links */
         .nav-link:hover {
-          background-color: #007bff;
+          background-color: #019ab7;
           border-radius: 5px;
         }
 

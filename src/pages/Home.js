@@ -80,19 +80,25 @@ const Home = () => {
         .feature-item {
           font-size: 1.2rem;
           margin-bottom: 1rem;
-          color: #555;
+          color: #049cbb;
           display: flex;
           align-items: center;
           transition: all 0.3s ease;
           padding-left: 1rem;
           border-left: 4px solid transparent;
         }
-
+        .feature-item a {
+          color: #049cbb;
+          text-decoration: none; /* Optional: removes underline */
+        }
+        .feature-item a:hover {
+          color: #036c89;
+        }
         /* Hover Effect on List Items */
         .feature-item:hover {
-          color: #007bff;
+          color: #049cbb;
           cursor: pointer;
-          border-left: 4px solid #007bff;
+          border-left: 4px solid #049cbb;
           transform: translateX(5px);
         }
 
