@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import BankingForms from './pages/BankingForms';
 import RTGSForms from './pages/RTGSForms';
+import ICICI from './pages/ICICI';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
        <Route path="/" element={<Home />} />
         <Route path="/rtgs" element={<RTGSForms />} />
         <Route path="/BankingForms" element={<BankingForms/>} />
+        <Route path="/BankingForms/ICICI" element={<ICICI/>} />
       </Routes>
     </Router>
   );

@@ -22,35 +22,31 @@ const ContactUs = () => {
     }));
   };
 
-  // Handle form submission to Google Forms
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    // Construct form data for Google Forms
-    const formDataEncoded = new FormData();
-    // formDataEncoded.append("entry.123456789", formData.name); // Replace with your field IDs
-    // formDataEncoded.append("entry.987654321", formData.email);
-    // formDataEncoded.append("entry.192837465", formData.message);
-    formDataEncoded.append("entry.189234234", formData.name);
-formDataEncoded.append("entry.209384738", formData.email);
-formDataEncoded.append("entry.302948203", formData.message);
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  
+  try {
+    const response = await fetch('http://localhost:5000/send_email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
 
+    const data = await response.json();
 
-    // Submit to Google Forms
-    fetch(googleFormUrl, {
-      method: "POST",
-      body: formDataEncoded,
-      mode: "no-cors" // Important for Google Forms
-    })
-    .then(() => {
+    if (data.success) {
       setSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('There was an error submitting the form. Please try again.');
-    });
-  };
+    } else {
+      alert(`Error: ${data.message}`);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('There was an error submitting the form. Please try again.');
+  }
+};
 
   // Internal CSS
   const styles = {
