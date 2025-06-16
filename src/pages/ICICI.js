@@ -330,17 +330,11 @@ const ICICI = () => {
                     <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
                         <button style={styles.closeButton} onClick={() => setSelectedImage(null)}>×</button>
                         <img 
-                            src={selectedImage} 
-                            alt="Full View" 
-                            style={styles.fullImage}
-                            onLoad={(e) => {
-                                const img = e.target;
-                                if (img.naturalWidth > window.innerWidth || img.naturalHeight > window.innerHeight) {
-                                    img.style.maxWidth = 'none';
-                                    img.style.maxHeight = 'none';
-                                }
-                            }}
-                        />
+    src={selectedImage} 
+    alt="Full View" 
+    style={styles.fullImage}
+/>
+
                     </div>
                 </div>
             )}
