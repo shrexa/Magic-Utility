@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <nav className="navbar">
- <img src="/icon.png" alt="Logo" className="logo" />
+    <img src={process.env.PUBLIC_URL + "/icon.png"} alt="Logo" className="logo" />
       <ul className="nav-links">
         <li><Link to="/" className="nav-link">Home</Link></li>
         <li><Link to="/rtgs-neft" className="nav-link">RTGS/NEFT Forms</Link></li>

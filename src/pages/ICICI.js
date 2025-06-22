@@ -15,6 +15,9 @@ import step3Img from '../assets/ICICIBankRTGSNEFTDemo/ICICIstep3.png';
 import step4Img from '../assets/ICICIBankRTGSNEFTDemo/ICICIstep4.png';
 import step5Img from '../assets/ICICIBankRTGSNEFTDemo/ICICIstep5.png';
 
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+
 
 const styles = {
     container: {
@@ -118,7 +121,7 @@ const styles = {
         borderRadius: '10px',
         boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
     },
-   modalOverlay: {
+    modalOverlay: {
         position: 'fixed',
         top: 0,
         left: 0,
@@ -170,7 +173,13 @@ const styles = {
 };
 
 const ICICI = () => {
-   const [selectedImage, setSelectedImage] = useState(null);
+
+    // const fillDetails = process.env.PUBLIC_URL + "/fillDetails.pdf";
+    // const stepsToUse = process.env.PUBLIC_URL + "/stepsToUse.pdf";
+    // const beneficiaryList = process.env.PUBLIC_URL + "/beneficiaryList.pdf";
+    // const remitterList = process.env.PUBLIC_URL + "/remitterList.pdf";
+
+    const [selectedImage, setSelectedImage] = useState(null);
     return (
         <div style={styles.container}>
             <h1 style={styles.title}>ICICI Bank RTGS/NEFT Form Excel Utility Demo</h1>
@@ -226,78 +235,78 @@ const ICICI = () => {
             </div>
 
             <div style={styles.section}>
-                
+
                 <div style={styles.stepContainer}>
 
                     <div style={styles.section}>
-                <h2 style={styles.sectionTitle}>📝 Steps to Follow</h2>
-                <div style={styles.stepContainer}>
-                    <div style={styles.stepItem}>
-                        <img 
-                            src={step1Img} 
-                            alt="Step 1" 
-                            style={styles.stepImg} 
-                            onClick={() => setSelectedImage(step1Img)} 
-                        />
-                        <div style={styles.stepText}>
-                            <strong>Step 1:</strong> Fill your own ICICI Bank details (Remitter). You can use more than one account.<br />
-                            <strong>स्टेप 1:</strong> अपना खुद का आईसीआईसीआई बैंक विवरण (प्रेषक) भरें, एक से अधिक खाता उपयोग कर सकते हैं।
-                        </div>
-                    </div>
+                        <h2 style={styles.sectionTitle}>📝 Steps to Follow</h2>
+                        <div style={styles.stepContainer}>
+                            <div style={styles.stepItem}>
+                                <img
+                                    src={step1Img}
+                                    alt="Step 1"
+                                    style={styles.stepImg}
+                                    onClick={() => setSelectedImage(step1Img)}
+                                />
+                                <div style={styles.stepText}>
+                                    <strong>Step 1:</strong> Fill your own ICICI Bank details (Remitter). You can use more than one account.<br />
+                                    <strong>स्टेप 1:</strong> अपना खुद का आईसीआईसीआई बैंक विवरण (प्रेषक) भरें, एक से अधिक खाता उपयोग कर सकते हैं।
+                                </div>
+                            </div>
 
-                    <div style={styles.stepItem}>
-                        <img 
-                            src={step2Img} 
-                            alt="Step 2" 
-                            style={styles.stepImg} 
-                            onClick={() => setSelectedImage(step2Img)} 
-                        />
-                        <div style={styles.stepText}>
-                            <strong>Step 2:</strong> Fill your parties/vendors and their bank details (Beneficiary) only once. Fill IFSC code first.<br />
-                            <strong>स्टेप 2:</strong> पार्टियों/वेंडर और उनके बैंक विवरण (लाभार्थी) को केवल एक बार भरें, पहले IFSC कोड भरें।
-                        </div>
-                    </div>
+                            <div style={styles.stepItem}>
+                                <img
+                                    src={step2Img}
+                                    alt="Step 2"
+                                    style={styles.stepImg}
+                                    onClick={() => setSelectedImage(step2Img)}
+                                />
+                                <div style={styles.stepText}>
+                                    <strong>Step 2:</strong> Fill your parties/vendors and their bank details (Beneficiary) only once. Fill IFSC code first.<br />
+                                    <strong>स्टेप 2:</strong> पार्टियों/वेंडर और उनके बैंक विवरण (लाभार्थी) को केवल एक बार भरें, पहले IFSC कोड भरें।
+                                </div>
+                            </div>
 
-                    <div style={styles.stepItem}>
-                        <img 
-                            src={step3Img} 
-                            alt="Step 3" 
-                            style={styles.stepImg} 
-                            onClick={() => setSelectedImage(step3Img)} 
-                        />
-                        <div style={styles.stepText}>
-                            <strong>Step 3:</strong> Type RTGS/NEFT Date, select Remitter & Beneficiary abbreviation. Fill details from the list, move cursor via the button to print.<br />
-                            <strong>स्टेप 3:</strong> RTGS/NEFT दिनांक टाइप करें, प्रेषक और लाभार्थी संक्षिप्त नाम चुनें, सूची अनुसार विवरण भरें, प्रिंट करने हेतु बटन से कर्सर मूव करें।
-                        </div>
-                    </div>
+                            <div style={styles.stepItem}>
+                                <img
+                                    src={step3Img}
+                                    alt="Step 3"
+                                    style={styles.stepImg}
+                                    onClick={() => setSelectedImage(step3Img)}
+                                />
+                                <div style={styles.stepText}>
+                                    <strong>Step 3:</strong> Type RTGS/NEFT Date, select Remitter & Beneficiary abbreviation. Fill details from the list, move cursor via the button to print.<br />
+                                    <strong>स्टेप 3:</strong> RTGS/NEFT दिनांक टाइप करें, प्रेषक और लाभार्थी संक्षिप्त नाम चुनें, सूची अनुसार विवरण भरें, प्रिंट करने हेतु बटन से कर्सर मूव करें।
+                                </div>
+                            </div>
 
-                    <div style={styles.stepItem}>
-                        <img 
-                            src={step4Img} 
-                            alt="Step 4" 
-                            style={styles.stepImg} 
-                            onClick={() => setSelectedImage(step4Img)} 
-                        />
-                        <div style={styles.stepText}>
-                            <strong>Step 4:</strong> Print the cheque first before the form.<br />
-                            <strong>स्टेप 4:</strong> फॉर्म से पहले चेक प्रिंट करें।
-                        </div>
-                    </div>
+                            <div style={styles.stepItem}>
+                                <img
+                                    src={step4Img}
+                                    alt="Step 4"
+                                    style={styles.stepImg}
+                                    onClick={() => setSelectedImage(step4Img)}
+                                />
+                                <div style={styles.stepText}>
+                                    <strong>Step 4:</strong> Print the cheque first before the form.<br />
+                                    <strong>स्टेप 4:</strong> फॉर्म से पहले चेक प्रिंट करें।
+                                </div>
+                            </div>
 
-                    <div style={styles.stepItem}>
-                        <img 
-                            src={step5Img} 
-                            alt="Step 5" 
-                            style={styles.stepImg} 
-                            onClick={() => setSelectedImage(step5Img)} 
-                        />
-                        <div style={styles.stepText}>
-                            <strong>Step 5:</strong> Fill cheque number in the sheet named "Fill RTGS NEFT Details" and print the form.<br />
-                            <strong>स्टेप 5:</strong> "Fill RTGS NEFT Details" शीट में चेक नंबर भरें और फॉर्म प्रिंट करें।
+                            <div style={styles.stepItem}>
+                                <img
+                                    src={step5Img}
+                                    alt="Step 5"
+                                    style={styles.stepImg}
+                                    onClick={() => setSelectedImage(step5Img)}
+                                />
+                                <div style={styles.stepText}>
+                                    <strong>Step 5:</strong> Fill cheque number in the sheet named "Fill RTGS NEFT Details" and print the form.<br />
+                                    <strong>स्टेप 5:</strong> "Fill RTGS NEFT Details" शीट में चेक नंबर भरें और फॉर्म प्रिंट करें।
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>                
 
                 </div>
             </div>
@@ -305,7 +314,7 @@ const ICICI = () => {
 
             <div style={styles.section}>
                 <h2 style={styles.sectionTitle}>🖨️ Cheque Print Sample</h2>
-                <img src={chequePrint} alt="Cheque Print Sample" style={styles.previewImg}  onClick={() => setSelectedImage(chequePrint)}/>
+                <img src={chequePrint} alt="Cheque Print Sample" style={styles.previewImg} onClick={() => setSelectedImage(chequePrint)} />
                 <a href={chequePrint} download style={styles.downloadLink}>Download Cheque Sample</a>
             </div>
 
@@ -325,15 +334,15 @@ const ICICI = () => {
                     <a href={remitterList} download style={styles.downloadLink}>Remitter List (PDF)</a>
                 </div>
             </div>
- {selectedImage && (
+            {selectedImage && (
                 <div style={styles.modalOverlay} onClick={() => setSelectedImage(null)}>
                     <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
                         <button style={styles.closeButton} onClick={() => setSelectedImage(null)}>×</button>
-                        <img 
-    src={selectedImage} 
-    alt="Full View" 
-    style={styles.fullImage}
-/>
+                        <img
+                            src={selectedImage}
+                            alt="Full View"
+                            style={styles.fullImage}
+                        />
 
                     </div>
                 </div>

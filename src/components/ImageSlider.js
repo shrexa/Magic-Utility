@@ -4,10 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const images = [
-  "/img1.jpg",
-  "/img2.jpg",
-  "/img3.jpg",
+  process.env.PUBLIC_URL + "/img1.jpg",
+  process.env.PUBLIC_URL + "/img2.jpg",
+  process.env.PUBLIC_URL + "/img3.jpg",
 ];
+
 
 function ImageSlider() {
   const settings = {
