@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/Magic-Utility/static/css/main.6b05dc6e.css",
+    "main.js": "/Magic-Utility/static/js/main.ebaa7c5f.js",
+    "static/js/453.0ddfe945.chunk.js": "/Magic-Utility/static/js/453.0ddfe945.chunk.js",
+    "static/media/ICICI Bank RTGS NEFT Application Form New Upload.xlsm": "/Magic-Utility/static/media/ICICI Bank RTGS NEFT Application Form New Upload.ed27daf32990614caf68.xlsm",
+    "static/media/form1-preview.jpg": "/Magic-Utility/static/media/form1-preview.a62010ed784a6335d540.jpg",
+    "static/media/Form 1 Page.pdf": "/Magic-Utility/static/media/Form 1 Page.4571f2081ccb35c9dda3.pdf",
+    "static/media/Form 2 Page.pdf": "/Magic-Utility/static/media/Form 2 Page.67e3189e2e64ef176175.pdf",
+    "static/media/form2-preview.jpg": "/Magic-Utility/static/media/form2-preview.5da3db6b6770f75c28af.jpg",
+    "static/media/ICICIstep5.png": "/Magic-Utility/static/media/ICICIstep5.8c9405816b4f8540d7ea.png",
+    "static/media/ICICIstep3.png": "/Magic-Utility/static/media/ICICIstep3.b4939a01923bac3e6269.png",
+    "static/media/ICICIstep2.png": "/Magic-Utility/static/media/ICICIstep2.c4acd858cb84548d51fb.png",
+    "static/media/Stepstousethefile.pdf": "/Magic-Utility/static/media/Stepstousethefile.db196069718eff2137d8.pdf",
+    "static/media/Fill Details.pdf": "/Magic-Utility/static/media/Fill Details.38343c478487143d44b2.pdf",
+    "static/media/Beneficiary List.pdf": "/Magic-Utility/static/media/Beneficiary List.2730aa5a6d3a7a80ed57.pdf",
+    "static/media/ICICIstep1.png": "/Magic-Utility/static/media/ICICIstep1.826b96a3568f2cddd945.png",
+    "static/media/Remitter List.pdf": "/Magic-Utility/static/media/Remitter List.657442219bdd67552b74.pdf",
+    "static/media/ICICI.jpg": "/Magic-Utility/static/media/ICICI.ce262df48b84c32767d0.jpg",
+    "static/media/ICICIstep4.png": "/Magic-Utility/static/media/ICICIstep4.eee02fed3ec81f4dddc1.png",
+    "static/media/cheque print.png": "/Magic-Utility/static/media/cheque print.babaf28a6b75d1c807fd.png",
+    "static/media/ICICI-RTGSpdf.pdf": "/Magic-Utility/static/media/ICICI-RTGSpdf.02590b4a2f6a60367ba4.pdf",
+    "static/media/slick.svg": "/Magic-Utility/static/media/slick.7ba97953187dc2907930.svg",
+    "static/media/slick.eot": "/Magic-Utility/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Magic-Utility/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Magic-Utility/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Magic-Utility/index.html",
+    "main.6b05dc6e.css.map": "/Magic-Utility/static/css/main.6b05dc6e.css.map",
+    "main.ebaa7c5f.js.map": "/Magic-Utility/static/js/main.ebaa7c5f.js.map",
+    "453.0ddfe945.chunk.js.map": "/Magic-Utility/static/js/453.0ddfe945.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b05dc6e.css",
+    "static/js/main.ebaa7c5f.js"
+  ]
+}
