@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-       <Route path="/" element={<Home />} />
+       <Route path="/Magic-Utility" element={<Home />} />
         <Route path="/rtgs" element={<RTGSForms />} />
         <Route path="/BankingForms" element={<BankingForms/>} />
         <Route path="/BankingForms/ICICI" element={<ICICI/>} />
