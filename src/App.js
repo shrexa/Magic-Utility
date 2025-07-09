@@ -14,7 +14,7 @@ function App() {
        <Route path="/Magic-Utility" element={<Home />} />
         <Route path="/rtgs" element={<RTGSForms />} />
         <Route path="/BankingForms" element={<BankingForms/>} />
-        <Route path="/BankingForms/ICICI" element={<ICICI/>} />
+        <Route path="/ICICI" element={<ICICI/>} />
       </Routes>
     </Router>
   );

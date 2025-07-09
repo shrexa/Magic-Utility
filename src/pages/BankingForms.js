@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import ICICIImage from '../assets/BankingForms/ICICI.jpg';
-import ICICIPDF from '../assets/BankingForms/ICICI-RTGSpdf.pdf';
+import ICICIImage from '../assets/ICICI.jpg';
+import ICICIPDF from '../assets/ICICI-RTGSpdf.pdf';
 import { Link } from 'react-router-dom';
 
 const styles = {
@@ -117,7 +117,7 @@ const BankingForms = () => {
             <a href={ICICIPDF} download="ICICI-RTGSpdf.pdf">
               <button style={styles.downloadBtn}>Download PDF</button>              
             </a>
-            <Link to="/BankingForms/ICICI">
+            <Link to="/ICICI">
               <button style={styles.downloadBtn}>Excel File Aito Utilities</button>              
             </Link>
           </div>
