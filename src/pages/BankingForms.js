@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import ICICIImage from '../assets/ICICI.jpg';
-import ICICIPDF from '../assets/ICICI-RTGSpdf.pdf';
+import ICICIImage from '../assets/BankingForms/ICICI.jpg';
+import ICICIPDF from '../assets/BankingForms/ICICI-RTGSpdf.pdf';
 import { Link } from 'react-router-dom';
 
 const styles = {
