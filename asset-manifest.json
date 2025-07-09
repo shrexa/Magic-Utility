@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Magic-Utility/static/css/main.6b05dc6e.css",
-    "main.js": "/Magic-Utility/static/js/main.9e9e995a.js",
+    "main.css": "/Magic-Utility/static/css/main.c34e969f.css",
+    "main.js": "/Magic-Utility/static/js/main.ca8757b2.js",
     "static/js/453.0ddfe945.chunk.js": "/Magic-Utility/static/js/453.0ddfe945.chunk.js",
     "static/media/ICICI Bank RTGS NEFT Application Form New Upload.xlsm": "/Magic-Utility/static/media/ICICI Bank RTGS NEFT Application Form New Upload.ed27daf32990614caf68.xlsm",
     "static/media/form1-preview.jpg": "/Magic-Utility/static/media/form1-preview.a62010ed784a6335d540.jpg",
@@ -25,12 +25,12 @@
     "static/media/slick.ttf": "/Magic-Utility/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Magic-Utility/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Magic-Utility/index.html",
-    "main.6b05dc6e.css.map": "/Magic-Utility/static/css/main.6b05dc6e.css.map",
-    "main.9e9e995a.js.map": "/Magic-Utility/static/js/main.9e9e995a.js.map",
+    "main.c34e969f.css.map": "/Magic-Utility/static/css/main.c34e969f.css.map",
+    "main.ca8757b2.js.map": "/Magic-Utility/static/js/main.ca8757b2.js.map",
     "453.0ddfe945.chunk.js.map": "/Magic-Utility/static/js/453.0ddfe945.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b05dc6e.css",
-    "static/js/main.9e9e995a.js"
+    "static/css/main.c34e969f.css",
+    "static/js/main.ca8757b2.js"
   ]
 }
